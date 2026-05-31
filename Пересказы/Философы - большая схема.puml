@@ -1,0 +1,325 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+skinparam shadowing false
+skinparam classAttributeIconSize 0
+
+package "Лекция 2. Восточная философия" {
+  class "Конфуций" as Cnf
+  class "Лао-цзы" as Lao
+  class "Мо-цзы" as Mo
+  class "Хань Фэй" as Han
+  class "Будда" as Bud
+  class "Чарвака" as Charvaka
+  class "Джайнизм" as Jain
+  class "Даосизм" as Dao
+  class "Конфуцианство" as Confu
+  class "Легизм" as Leg
+}
+
+package "Лекция 3. Античная философия" {
+  class "Фалес" as Thales
+  class "Анаксимандр" as Anaximander
+  class "Анаксимен" as Anaximenes
+  class "Пифагор" as Pyth
+  class "Ксенофан" as Xen
+  class "Парменид" as Parm
+  class "Зенон" as Zeno
+  class "Гераклит" as Her
+  class "Эмпедокл" as Emp
+  class "Анаксагор" as Ana
+  class "Левкипп" as Leuc
+  class "Демокрит" as Dem
+  class "Софисты" as Soph
+  class "Протагор" as Pro
+  class "Горгий" as Gorg
+  class "Сократ" as Soc
+  class "Платон" as Pla
+  class "Аристотель" as Ari
+  class "Киники" as Cyn
+  class "Киренаики" as Cyr
+  class "Мегарики" as Meg
+  class "Пиррон" as Pyr
+  class "Эпикур" as Epi
+  class "Стоики" as Sto
+}
+
+package "Лекция 4. Средневековая философия" {
+  class "Августин" as Aug
+  class "Фома Аквинский" as Tho
+  class "Патристика" as Pat
+  class "Схоластика" as Sch
+}
+
+package "Лекция 5. Возрождение" {
+  class "Данте" as Dan
+  class "Петрарка" as Pet
+  class "Лоренцо Валла" as Vall
+  class "Николай Кузанский" as Cus
+  class "Пико делла Мирандола" as Pico
+  class "Парацельс" as Para
+  class "Коперник" as Cop
+  class "Джордано Бруно" as Bru
+  class "Галилей" as Gal
+  class "Мартин Лютер" as Lut
+  class "Жан Кальвин" as Cal
+  class "Макиавелли" as Mac
+  class "Томас Мор" as Mor
+  class "Томмазо Кампанелла" as Cam
+}
+
+package "Лекция 6. Новое время" {
+  class "Бэкон" as Bac
+  class "Гоббс" as Hob
+  class "Локк" as Loc
+  class "Декарт" as Des
+  class "Спиноза" as Spi
+  class "Лейбниц" as Lei
+  class "Беркли" as Ber
+}
+
+' Восточная линия
+Mo --> Cnf : реакция на
+Han --> Cnf : критика
+Bud --> Cnf : анти-брахманская
+Charvaka --> Cnf : полемика
+Jain --> Cnf : критика
+Lao --> Dao
+Cnf --> Confu
+Mo --> Leg
+Han --> Leg
+
+' Античная линия
+Thales --> Anaximander
+Anaximander --> Anaximenes
+Xen --> Parm
+Parm --> Zeno
+Soc --> Pla
+Pla --> Ari
+Soc --> Cyn
+Soc --> Cyr
+Soc --> Meg
+Dem --> Epi
+Her --> Sto
+Soph --> Soc
+Pro --> Soph
+Gorg --> Soph
+Leuc --> Dem
+
+' Средневековье
+Pat --> Aug
+Sch --> Tho
+Pla --> Aug : влияние Платона
+Ari --> Tho : влияние Аристотеля
+
+' Возрождение
+Pet --> Sch : критика
+Vall --> Epi : возрождение
+Cus --> Pla : неоплатонизм
+Pico --> Pla : неоплатонизм
+Cop --> Bru
+Lut --> Cal
+Mor --> Cam
+
+' Новое время
+Bac --> Hob
+Hob --> Loc
+Des --> Spi
+Des --> Lei
+Loc --> Ber
+
+' Связи-полемики
+Spi ..> Des : полемика
+Lei ..> Des : полемика
+Ber ..> Loc : критика материи
+
+note right of Cnf
+  Новое: цзюнь-цзы,
+  золотая середина
+end note
+
+note right of Lao
+  Новое: Дао,
+  у-вэй, естественная гармония
+end note
+
+note right of Mo
+  Новое: всеобщая любовь,
+  взаимная польза
+end note
+
+note right of Han
+  Новое: приоритет закона,
+  наград и наказаний
+end note
+
+note right of Bud
+  Новое: четыре истины,
+  восьмеричный путь
+end note
+
+note right of Thales
+  Новое: вода как первоначало
+end note
+
+note right of Anaximander
+  Новое: апейрон,
+  бесконечные миры
+end note
+
+note right of Anaximenes
+  Новое: воздух как начало,
+  сгущение и разрежение
+end note
+
+note right of Pyth
+  Новое: число как основа мира
+end note
+
+note right of Parm
+  Новое: бытие едино,
+  небытия нет
+end note
+
+note right of Zeno
+  Новое: апории против движения
+end note
+
+note right of Her
+  Новое: диалектика,
+  борьба противоположностей
+end note
+
+note right of Emp
+  Новое: четыре стихии,
+  Любовь и Вражда
+end note
+
+note right of Ana
+  Новое: Нус как ум,
+  упорядочивающий хаос
+end note
+
+note right of Leuc
+  Новое: атомизм
+end note
+
+note right of Dem
+  Новое: развитый атомизм,
+  материализм
+end note
+
+note right of Pro
+  Новое: человек мера всех вещей
+end note
+
+note right of Gorg
+  Новое: радикальный скепсис,
+  сила речи
+end note
+
+note right of Soc
+  Новое: майевтика,
+  этический реализм
+end note
+
+note right of Pla
+  Новое: мир идей,
+  пещера, бессмертие души
+end note
+
+note right of Ari
+  Новое: четыре причины,
+  формальная логика
+end note
+
+note right of Aug
+  Новое: благодать,
+  теодицея, два града
+end note
+
+note right of Tho
+  Новое: 5 доказательств Бога,
+  синтез веры и разума
+end note
+
+note right of Pet
+  Новое: искусство жизни,
+  критика схоластики
+end note
+
+note right of Vall
+  Новое: христианский гедонизм
+end note
+
+note right of Cus
+  Новое: совпадение противоположностей
+end note
+
+note right of Pico
+  Новое: достоинство человека,
+  свобода самоопределения
+end note
+
+note right of Cop
+  Новое: гелиоцентризм
+end note
+
+note right of Bru
+  Новое: бесконечная Вселенная,
+  множество миров
+end note
+
+note right of Lut
+  Новое: личная вера без посредников
+end note
+
+note right of Mac
+  Новое: автономия политики
+end note
+
+note right of Mor
+  Новое: `Утопия`,
+  общественная собственность
+end note
+
+note right of Cam
+  Новое: `Город Солнца`,
+  тотальная организация общества
+end note
+
+note right of Bac
+  Новое: индукция,
+  таблицы, идолы
+end note
+
+note right of Hob
+  Новое: общественный договор,
+  война всех против всех
+end note
+
+note right of Loc
+  Новое: tabula rasa,
+  естественные права
+end note
+
+note right of Des
+  Новое: cogito,
+  рациональный метод, дуализм
+end note
+
+note right of Spi
+  Новое: монизм,
+  Бог = природа
+end note
+
+note right of Lei
+  Новое: монады,
+  предустановленная гармония
+end note
+
+note right of Ber
+  Новое: мир как комплекс ощущений
+end note
+
+@enduml
